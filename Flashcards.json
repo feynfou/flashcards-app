@@ -1,0 +1,7 @@
+[
+  { "image": "images/image-1.JPG", "text": "LION - ASSAD", "audio": "audio/1.m4a" },
+  { "image": "images/image-2.JPG", "text": "CANARD - BATTA", "audio": "audio/2.m4a" },
+  { "image": "images/image-3.JPG", "text": "CROCODILE - TIMSSAH", "audio": "audio/3.m4a" },
+  { "image": "images/image-4.JPG", "text": "Grapes", "audio": "audio/4.m4a" },
+  { "image": "images/image-5.JPG", "text": "Strawberry", "audio": "audio/5.m4a" }
+]

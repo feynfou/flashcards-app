@@ -1,0 +1,91 @@
+/* layout + app card */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;   /* phone-sized container */
+  margin: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(20,30,40,0.08);
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* flashcard container (where JS injects .flashcard) */
+#flashcard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* single card */
+.flashcard {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* nicer on mobile */
+  transition: transform 0.18s ease;
+}
+
+/* image: keep 9:16 but be responsive */
+.flashcard img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;     /* modern browsers */
+  object-fit: contain;      /* show whole image, letterbox if needed */
+  background: #f0f2f5;
+}
+
+/* optional: if you prefer cover (fills card and crops) use object-fit: cover */
+/* .flashcard img { object-fit: cover; } */
+
+.flashcard p {
+  margin: 10px 12px 0 12px;
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.2;
+}
+
+/* controls */
+.controls {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #0069ff;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(2,6,23,0.06);
+}
+
+button:active { transform: translateY(1px); }
+button[disabled] { opacity: 0.6; cursor: default; }
+
+/* mobile tweaks */
+@media (max-width: 420px) {
+  .app { padding: 10px; margin: 8px; }
+  .flashcard p { font-size: 1rem; }
+  button { padding: 9px 12px; font-size: 0.95rem; }
+}
